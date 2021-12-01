@@ -7,7 +7,7 @@ const sonarScan = (num?: number[]): void => {
   const numbers = num || readFileAsNumberArray(getInput());
   let increase = 0;
   let iterator = numbers.length;
-  while (iterator-- && iterator !== 0) {
+  while (iterator-- !== 0) {
     const num = numbers[iterator];
     const prev = numbers[iterator - 1];
     if (num > prev) {
