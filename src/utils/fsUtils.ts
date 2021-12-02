@@ -10,4 +10,10 @@ const readFileAsNumberArray = (file: string): number[] => {
     .map((el) => Number(el));
 };
 
-export { readFileAsNumberArray };
+const readFileAsKeySpace = (file: string): string[][] => {
+  return readFile(file)
+    .split('\n')
+    .map((el) => el.split(' '));
+};
+
+export { readFileAsNumberArray, readFileAsKeySpace };
