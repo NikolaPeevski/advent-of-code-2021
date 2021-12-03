@@ -16,4 +16,10 @@ const readFileAsKeySpace = (file: string): string[][] => {
     .map((el) => el.split(' '));
 };
 
-export { readFileAsNumberArray, readFileAsKeySpace };
+const readFileAsKey = (file: string): string[][] => {
+  return readFile(file)
+    .split('\n')
+    .map((el) => el.split(''));
+};
+
+export { readFileAsNumberArray, readFileAsKeySpace, readFileAsKey };
